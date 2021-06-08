@@ -20,13 +20,13 @@ export class StatusDialogComponent implements OnInit {
 
   public add(): void {
     this.statusService.addStatus(this.data).subscribe(() => {
-      this.snackBar.open('Uspesno dodat status: ' + this.data.naziv, 'Ok', {
+      this.snackBar.open('Uspešno dodat status: ' + this.data.naziv, 'Ok', {
         duration: 2500
       })
     }),
     (error: Error) => {
       console.log(error.name + ' ' + error.message);
-      this.snackBar.open('Doslo je do greske prilikom dodavanja novog statusa!', 'Zatvori', {
+      this.snackBar.open('Došlo je do greške prilikom dodavanja novog statusa!', 'Zatvori', {
         duration: 2500
       })
     }
@@ -34,13 +34,13 @@ export class StatusDialogComponent implements OnInit {
 
   public update(): void {
     this.statusService.updateStatus(this.data).subscribe(() => {
-      this.snackBar.open('Uspesno modifikovan status: ' + this.data.naziv, 'Ok', {
+      this.snackBar.open('Uspešno modifikovan status: ' + this.data.naziv, 'Ok', {
         duration: 2500
       })
     }),
     (error: Error) => {
       console.log(error.name + ' ' + error.message);
-      this.snackBar.open('Doslo je do greske prilikom izmene statusa!', 'Zatvori', {
+      this.snackBar.open('Došlo je do greške prilikom izmene statusa!', 'Zatvori', {
         duration: 2500
       })
     }
@@ -48,13 +48,13 @@ export class StatusDialogComponent implements OnInit {
 
   public delete(): void {
     this.statusService.deleteStatus(this.data.id).subscribe(() => {
-      this.snackBar.open('Uspesno obrisan status: ' + this.data.naziv, 'Ok', {
+      this.snackBar.open('Uspešno obrisan status: ' + this.data.naziv, 'Ok', {
         duration: 2500
       })
     }),
     (error: Error) => {
       console.log(error.name + ' ' + error.message);
-      this.snackBar.open('Doslo je do greske prilikom brisanja statusa!', 'Zatvori', {
+      this.snackBar.open('Došlo je do greške prilikom brisanja statusa!', 'Zatvori', {
         duration: 2500
       })
     }

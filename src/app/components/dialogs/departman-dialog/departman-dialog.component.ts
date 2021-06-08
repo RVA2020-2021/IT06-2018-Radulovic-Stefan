@@ -36,13 +36,13 @@ export class DepartmanDialogComponent implements OnInit {
 
   public add(): void {
     this.departmanService.addDepartman(this.data).subscribe(() => {
-      this.snackBar.open('Departman uspesno dodat: ' + this.data.id, 'OK', {
+      this.snackBar.open('Departman uspešno dodat: ' + this.data.id, 'OK', {
         duration: 2500
       });
     }),
     (error: Error) => {
       console.log(error);
-      this.snackBar.open('Doslo je do greske prilikom dodavanja departmana.', 'Zatvori', {
+      this.snackBar.open('Došlo je do greške prilikom dodavanja departmana.', 'Zatvori', {
         duration: 2500
       });
     }
@@ -50,13 +50,13 @@ export class DepartmanDialogComponent implements OnInit {
 
   public update(): void {
     this.departmanService.updateDepartman(this.data).subscribe(() => {
-      this.snackBar.open('Departman uspesno izmenjen: ' + this.data.id, 'OK', {
+      this.snackBar.open('Departman uspešno izmenjen: ' + this.data.id, 'OK', {
         duration: 2500
       });
     }),
     (error: Error) => {
       console.log(error);
-      this.snackBar.open('Doslo je do greske prilikom izmene departmana.', 'Zatvori', {
+      this.snackBar.open('Došlo je do greške prilikom izmene departmana.', 'Zatvori', {
         duration: 2500
       });
     }
@@ -64,13 +64,13 @@ export class DepartmanDialogComponent implements OnInit {
 
   public delete(): void {
     this.departmanService.deleteDepartman(this.data.id).subscribe(() => {
-      this.snackBar.open('Departman uspesno obrisan: ' + this.data.id, 'OK', {
+      this.snackBar.open('Departman uspešno obrisan: ' + this.data.id, 'OK', {
         duration: 2500
       });
     }),
     (error: Error) => {
       console.log(error);
-      this.snackBar.open('Doslo je do greske prilikom brisanja departmana.', 'Zatvori', {
+      this.snackBar.open('Došlo je do greške prilikom brisanja departmana.', 'Zatvori', {
         duration: 2500
       });
     }

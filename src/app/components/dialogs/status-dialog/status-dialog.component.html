@@ -14,9 +14,9 @@
             </mat-form-field>
         </div>
         <div mat-dialog-action>
-            <button mat-button *ngIf="flag == 1" type="submit" [mat-dialog-close]="1" (click)="add()" [disabled]="!formControl.valid">Sacuvaj</button>
-            <button mat-button *ngIf="flag == 2" type="submit" [mat-dialog-close]="1" (click)="update()" [disabled]="!formControl.valid">Sacuvaj</button>
-            <button mat-button *ngIf="flag == 3" type="submit" [mat-dialog-close]="1" (click)="delete()">Obrisi</button>
+            <button mat-button *ngIf="flag == 1" type="submit" [mat-dialog-close]="1" (click)="add()" [disabled]="!formControl.valid">Sačuvaj</button>
+            <button mat-button *ngIf="flag == 2" type="submit" [mat-dialog-close]="1" (click)="update()" [disabled]="!formControl.valid">Sačuvaj</button>
+            <button mat-button *ngIf="flag == 3" type="submit" [mat-dialog-close]="1" (click)="delete()">Obriši</button>
             <button mat-button (click)="cancel()">Ponisti</button>
         </div>
     </form>

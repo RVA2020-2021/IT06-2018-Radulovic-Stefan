@@ -45,13 +45,13 @@ export class StudentDialogComponent implements OnInit, OnDestroy {
 
   public add(): void {
     this.studentService.addStudent(this.data).subscribe(() => {
-      this.snackBar.open('Student uspesno dodat.', 'OK', {
+      this.snackBar.open('Student uspešno dodat.', 'OK', {
         duration: 2500
       });
     }),
     (error: Error) => {
       console.log(error);
-      this.snackBar.open('Doslo je do greske prilikom dodavanja studenta.', 'Zatvori', {
+      this.snackBar.open('Došlo je do greške prilikom dodavanja studenta.', 'Zatvori', {
         duration: 2500
       });
     }
@@ -59,13 +59,13 @@ export class StudentDialogComponent implements OnInit, OnDestroy {
 
   public update(): void {
     this.studentService.updateStudent(this.data).subscribe(() => {
-      this.snackBar.open('Student uspesno izmenjen: ' + this.data.id, 'OK', {
+      this.snackBar.open('Student uspešno izmenjen: ' + this.data.id, 'OK', {
         duration: 2500
       });
     }),
     (error: Error) => {
       console.log(error);
-      this.snackBar.open('Doslo je do greske prilikom izmene studenta.', 'Zatvori', {
+      this.snackBar.open('Došlo je do greške prilikom izmene studenta.', 'Zatvori', {
         duration: 2500
       });
     }
@@ -73,13 +73,13 @@ export class StudentDialogComponent implements OnInit, OnDestroy {
 
   public delete(): void {
     this.studentService.deleteStudent(this.data.id).subscribe(() => {
-      this.snackBar.open('Student uspesno obrisan: ' + this.data.id, 'OK', {
+      this.snackBar.open('Student uspešno obrisan: ' + this.data.id, 'OK', {
         duration: 2500
       });
     }),
     (error: Error) => {
       console.log(error);
-      this.snackBar.open('Doslo je do greske prilikom brisanja studenta.', 'Zatvori', {
+      this.snackBar.open('Došlo je do greške prilikom brisanja studenta.', 'Zatvori', {
         duration: 2500
       });
     }

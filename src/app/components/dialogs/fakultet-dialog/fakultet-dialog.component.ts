@@ -23,13 +23,13 @@ export class FakultetDialogComponent implements OnInit {
 
   public add(): void {
     this.fakultetService.addFakultet(this.data).subscribe(() => {
-      this.snackBar.open('Uspesno dodat fakultet: ' + this.data.naziv, 'Ok', {
+      this.snackBar.open('Uspešno dodat fakultet: ' + this.data.naziv, 'Ok', {
         duration: 2500
       })
     }),
     (error: Error) => {
       console.log(error.name + ' ' + error.message);
-      this.snackBar.open('Doslo je do greske prilikom dodavanja novog fakulteta!', 'Zatvori', {
+      this.snackBar.open('Došlo je do greške prilikom dodavanja novog fakulteta!', 'Zatvori', {
         duration: 2500
       })
     }
@@ -37,13 +37,13 @@ export class FakultetDialogComponent implements OnInit {
 
   public update(): void {
     this.fakultetService.updateFakultet(this.data).subscribe(() => {
-      this.snackBar.open('Uspesno modifikovan fakultet: ' + this.data.naziv, 'Ok', {
+      this.snackBar.open('Uspešno modifikovan fakultet: ' + this.data.naziv, 'Ok', {
         duration: 2500
       })
     }),
     (error: Error) => {
       console.log(error.name + ' ' + error.message);
-      this.snackBar.open('Doslo je do greske prilikom izmene fakulteta!', 'Zatvori', {
+      this.snackBar.open('Došlo je do greške prilikom izmene fakulteta!', 'Zatvori', {
         duration: 2500
       })
     }
@@ -51,13 +51,13 @@ export class FakultetDialogComponent implements OnInit {
 
   public delete(): void {
     this.fakultetService.deleteFakultet(this.data.id).subscribe(() => {
-      this.snackBar.open('Uspesno obrisan fakultet: ' + this.data.naziv, 'Ok', {
+      this.snackBar.open('Uspešno obrisan fakultet: ' + this.data.naziv, 'Ok', {
         duration: 2500
       })
     }),
     (error: Error) => {
       console.log(error.name + ' ' + error.message);
-      this.snackBar.open('Doslo je do greske prilikom brisanja fakulteta!', 'Zatvori', {
+      this.snackBar.open('Došlo je do greške prilikom brisanja fakulteta!', 'Zatvori', {
         duration: 2500
       })
     }
