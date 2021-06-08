@@ -52,7 +52,7 @@ CREATE INDEX idxpk_status ON status(id);
 
 CREATE INDEX idxfk_departman_fakultet ON departman(fakultet);
 CREATE INDEX idxfk_student_status ON student(status);
-CREATE INDEX idxfk_student_departman ON student(departman)
+CREATE INDEX idxfk_student_departman ON student(departman);
 
 CREATE SEQUENCE fakultet_seq INCREMENT 1;
 CREATE SEQUENCE departman_seq INCREMENT 1;
